@@ -5,6 +5,7 @@ void usage(char *programName) {
     printf("Usage: %s number1 operation number2\n", programName);
     printf("Available operations:\n");
     printf("\tadd\n");
+    printf("\tsub\n");
     printf("\n");
 }
 
@@ -24,6 +25,13 @@ int main(int argc, char* argv[]) {
         if (!strcmp("add", argv[2])) {
             result = number1 + number2;
             printf("%d + %d = %d\n", number1, number2, result);
+            return 0;
+        }
+
+
+        if (!strcmp("sub", argv[2])) {
+            result = number1 - number2;
+            printf("%d - %d = %d\n", number1, number2, result);
             return 0;
         }
 
